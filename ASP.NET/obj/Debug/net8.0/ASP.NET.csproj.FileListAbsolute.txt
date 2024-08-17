@@ -165,3 +165,11 @@
 /home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/obj/Debug/net8.0/ASP.NET.pdb
 /home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/obj/Debug/net8.0/ASP.NET.genruntimeconfig.cache
 /home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/obj/Debug/net8.0/ref/ASP.NET.dll
+/home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/bin/Debug/net8.0/MySqlConnector.dll
+/home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/bin/Debug/net8.0/MySqlConnector.DependencyInjection.dll
+/home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/bin/Debug/net8.0/System.Data.SqlClient.dll
+/home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/bin/Debug/net8.0/runtimes/win-arm64/native/sni.dll
+/home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/bin/Debug/net8.0/runtimes/win-x64/native/sni.dll
+/home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/bin/Debug/net8.0/runtimes/win-x86/native/sni.dll
+/home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/bin/Debug/net8.0/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/home/punk/Desktop/PRACTICAL_BRIAN_MURIUKI/ASP.NET/bin/Debug/net8.0/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll

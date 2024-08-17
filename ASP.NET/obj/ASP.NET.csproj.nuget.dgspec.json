@@ -57,6 +57,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "MySqlConnector.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.3.6, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
             }
           },
           "imports": [

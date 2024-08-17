@@ -1,7 +1,20 @@
+
+using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container.(Razor Pages and Controllers)
 builder.Services.AddRazorPages();
+
+
+//Service for DB connnection
+/*builder.Services.AddDbContext<ApplicationDbContext>(options =>{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});*/
+builder.Services.AddMySqlDataSource(builder.Configuration.GetConnectionString("Default")!);
+
+
 
 var app = builder.Build();
 
