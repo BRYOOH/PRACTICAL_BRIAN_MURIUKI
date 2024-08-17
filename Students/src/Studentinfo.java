@@ -8,6 +8,9 @@
  * view all the students
  * view students in one stream*/
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -15,24 +18,25 @@ import java.util.Scanner;
 
 
 public class Studentinfo {
+	
 	String studentName;
 	String adminNo;
 	int id;
 	
 	List <String> Form1a = new ArrayList<String>();
-	List <String> all1a = new ArrayList<String>();
-	
 	List <String> Form1b = new ArrayList<String>();
 	List <String> Form1c = new ArrayList<String>();
 	
 	Scanner scan = new Scanner(System.in);
 	
-	String uri = "mongodb+srv://brianmuchira001:<password>@cluster0.c8atalq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+	
 	
 	Studentinfo(){
 		
 	student();
 
+	 
+	
 	 String option;
 		
 	 do {
@@ -51,9 +55,37 @@ public class Studentinfo {
 			 System.out.println();
 			 Form1a.add(studentName);
 			 Form1a.add(adminNo);
-			 all1a.addAll( Form1a);
 			 System.out.println("The form 1A update list is as follows " + Form1a);
 			 System.out.println("=============================================");
+			 try {
+				  //Creates a java connection with mySQL database
+				  
+				  String myDriver = "com.mysql.cj.jdbc.Driver";
+				  Class.forName(myDriver);
+		          Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Student",
+		              "root", "password");
+		          System.out.println("Conection created");
+		          System.out.println("============================");
+
+		          // Insert the values in the db
+		          
+		          PreparedStatement st = (PreparedStatement) connection
+		              .prepareStatement("insert into Form1a(id,studentName,adminNo)" + "values(?,?,?)");
+
+		          st.setInt(1,0);
+		          st.setString(2, studentName);
+		          st.setString(3, adminNo);
+		          
+		          
+		          st.execute();
+		          
+		          connection.close();
+		          }
+				  catch (Exception a)
+				    {
+				      System.err.println("Got an exception!");
+				      System.err.println(a.getMessage());
+				    }
 			 student();
 			 break;
 		 case "B":
@@ -63,6 +95,35 @@ public class Studentinfo {
 			 Form1b.add(adminNo);
 			 System.out.println("The form 1B update list is as follows " + Form1b);
 			 System.out.println("=============================================");
+			 try {
+				  //Creates a java connection with mySQL database
+				  
+				  String myDriver = "com.mysql.cj.jdbc.Driver";
+				  Class.forName(myDriver);
+		          Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Student",
+		              "root", "password");
+		          System.out.println("Conection created");
+		          System.out.println("============================");
+
+		          // Insert the values in the db
+		          
+		          PreparedStatement st = (PreparedStatement) connection
+		              .prepareStatement("insert into Form1b(id,studentName,adminNo)" + "values(?,?,?)");
+
+		          st.setInt(1,0);
+		          st.setString(2, studentName);
+		          st.setString(3, adminNo);
+		          
+		          
+		          st.execute();
+		          
+		          connection.close();
+		          }
+				  catch (Exception a)
+				    {
+				      System.err.println("Got an exception!");
+				      System.err.println(a.getMessage());
+				    }
 			 student();
 			 break;
 		 case "C":
@@ -72,6 +133,35 @@ public class Studentinfo {
 			 Form1c.add(adminNo);
 			 System.out.println("The form 1C update list is as follows " + Form1c);
 			 System.out.println("=============================================");
+			 try {
+				  //Creates a java connection with mySQL database
+				  
+				  String myDriver = "com.mysql.cj.jdbc.Driver";
+				  Class.forName(myDriver);
+		          Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Student",
+		              "root", "password");
+		          System.out.println("Conection created");
+		          System.out.println("============================");
+
+		          // Insert the values in the db
+		          
+		          PreparedStatement st = (PreparedStatement) connection
+		              .prepareStatement("insert into Form1c(id,studentName,adminNo)" + "values(?,?,?)");
+
+		          st.setInt(1,0);
+		          st.setString(2, studentName);
+		          st.setString(3, adminNo);
+		          
+		          
+		          st.execute();
+		          
+		          connection.close();
+		          }
+				  catch (Exception a)
+				    {
+				      System.err.println("Got an exception!");
+				      System.err.println(a.getMessage());
+				    }
 			 student();
 			 break;
 			 
@@ -81,8 +171,10 @@ public class Studentinfo {
 				 break;
 		 }
 		 
+		
 		 
-		 		}
+		 	}
+	 
 	 	while(option!="X");
 	 		
 	}
@@ -102,7 +194,7 @@ public class Studentinfo {
 		adminNo = admin;
 	
 		System.out.println();
+
+		
 	}
-	
-	
 }
