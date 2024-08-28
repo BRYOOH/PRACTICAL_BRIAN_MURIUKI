@@ -1,0 +1,44 @@
+package com.example.demo.model;
+
+import jakarta.persistence.Entity;
+
+import jakarta.persistence.*;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="Form1a")
+@SecondaryTables({
+	@SecondaryTable(name="Form1b"),
+	@SecondaryTable(name="Form1c")
+})
+
+public class Student {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(name="studentName")
+	private String studentName;
+	
+	@Column(name="adminNo")
+	private String adminNo;
+	
+	public String getStudentName() {
+		return studentName;
+	}
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+	public String getAdminNo() {
+		return adminNo;
+	}
+
+	public void setAdminNo(String adminNo) {
+		this.adminNo = adminNo;
+	}
+}

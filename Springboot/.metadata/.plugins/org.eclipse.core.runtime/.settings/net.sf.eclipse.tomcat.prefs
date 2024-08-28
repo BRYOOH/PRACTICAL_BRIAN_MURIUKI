@@ -1,0 +1,6 @@
+computeSourcePath=true
+contextsDir=/home/punk/Downloads/apache-tomcat-10.1.28/conf/Catalina/localhost
+eclipse.preferences.version=1
+tomcatConfigFile=/home/punk/Downloads/apache-tomcat-10.1.28/conf/server.xml
+tomcatDir=/home/punk/Downloads/apache-tomcat-10.1.28
+tomcatVersion=tomcatV9
